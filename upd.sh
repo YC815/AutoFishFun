@@ -1,4 +1,3 @@
 pip install requests
-python3 UpdateFishFunction.py
-sh ok.sh
-source ~/.config/fish/config.fish
+python3 autofishfunction/UpdateFishFunction.py
+sh autofishfunction/ok.sh
