@@ -23,23 +23,21 @@ config_file = f'/Users/{username}/.dotfiles/fish/.config/fish/config.fish'
 with open(function_file, 'r') as f:
     function_text = f.read()
 
-with open(config_file, 'r') as f:
+with open(config_file, 'r+') as f:
     lines = f.readlines()
+    f.seek(0)
+    index = None
+    for i, line in enumerate(lines):
+        if line.strip() == '# yushun\'s funstion':
+            index = i
+            break
 
-index = None
-for i, line in enumerate(lines):
-    if line.strip() == '# yushun\'s funstion':
-        index = i
-        break
-
-if index is not None:
-    lines = lines[:index]  # 删除 # yushun's funstion 及之后的代码
-
-lines.append('\n')  # 添加换行
-lines.append(function_text)  # 添加函数文本
-
-with open(config_file, 'w') as f:
-    f.writelines(lines)
+    if index is not None:
+        lines = lines[:index]  # 删除 # yushun's funstion 及之后的代码
+        lines.append('\n')  # 添加换行
+        lines.append(function_text)  # 添加函数文本
+        f.writelines(lines)
+        f.truncate()
 
 username = os.getlogin()
 subprocess.call(['sh', f'{script_dir}/ok.sh'])
