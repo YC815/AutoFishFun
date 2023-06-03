@@ -1,7 +1,8 @@
 import requests
 import subprocess
 import os
-
+script_path = os.path.abspath(__file__)
+script_dir = script_path.rsplit("/", 1)[0]
 # 下載function.text檔案 #
 url = 'https://github.com/YC815/MyFishFunction/raw/main/function.text'
 filename = 'function.text'
