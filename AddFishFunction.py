@@ -26,4 +26,5 @@ with open(config_file, 'a') as f:
 
 current_path = os.getcwd()
 os.chdir(current_path)
-subprocess.call(['sh', 'ok.sh'])
+ok_script_path = os.path.join(current_path, 'ok.sh')
+subprocess.call(['sh', ok_script_path])
