@@ -14,17 +14,11 @@ with open(filename, 'wb') as file:
 
 # 寫入內容 #
 function_file = 'function.text'
-config_file = '.dotfiles/fish/.config/fish/config.fish'
+username = os.getlogin()
+config_file = f'/Users/{username}/.dotfiles/fish/.config/fish/config.fish'
 
 with open(function_file, 'r') as f:
     function_text = f.read()
-username = os.getlogin()
-os.chdir(f'/Users/{username}')
-os.chdir(f'/Users/{username}')
 with open(config_file, 'a') as f:
     f.write('\n' + function_text)
 
-current_path = os.getcwd()
-os.chdir(current_path)
-ok_script_path = os.path.join(current_path, 'ok.sh')
-subprocess.call(['sh', ok_script_path])
