@@ -1,7 +1,7 @@
 import requests
 import subprocess
 import os
-
+script_path = os.path.abspath(__file__)
 # 下載function.text檔案 #
 url = 'https://github.com/YC815/MyFishFunction/raw/main/function.text'
 filename = 'function.text'
@@ -23,4 +23,4 @@ with open(config_file, 'a') as f:
     f.write('\n' + function_text)
 
 username = os.getlogin()
-subprocess.call(['sh', f'/Users/{username}/autofishfun/ok.sh'])
+subprocess.call(['sh', f'{script_path}/ok.sh'])
