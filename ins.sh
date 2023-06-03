@@ -2,5 +2,5 @@ pip install requests
 python3 AddFishFunction.py
 sh ok.sh
 cd
-osascript -e 'tell application "Alacritty" to quit'
+osascript -e 'quit app "Alacritty"'
 open -a Alacritty
