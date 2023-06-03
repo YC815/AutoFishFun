@@ -1,2 +1,2 @@
-rm -rf ../autofishfun
+rm -rf ../autofishfun/
 exit
