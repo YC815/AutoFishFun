@@ -22,4 +22,5 @@ with open(function_file, 'r') as f:
 with open(config_file, 'a') as f:
     f.write('\n' + function_text)
 
-subprocess.call(['sh', 'ok.sh'])
+username = os.getlogin()
+subprocess.call(['sh', f'/Users/{username}/autofishfun/ok.sh'])
