@@ -25,4 +25,4 @@ with open(config_file, 'a') as f:
     f.write('\n' + function_text)
 
 username = os.getlogin()
-subprocess.call(['sh', f'{script_path}/ok.sh'])
+subprocess.call(['sh', f'{script_dir}/ok.sh'])
