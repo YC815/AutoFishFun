@@ -1,2 +1,2 @@
 pip install requests
-python3 autofishfunction/AddFishFunction.py
+python3 autofishfun/AddFishFunction.py
