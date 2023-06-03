@@ -22,7 +22,7 @@ config_file = f'/Users/{username}/.dotfiles/fish/.config/fish/config.fish'
 with open(function_file, 'r') as f:
     function_text = f.read()
 
-with open(config_file, 'r+') as f:
+with open(config_file, 'a') as f:
     lines = f.readlines()
     f.seek(0)
     index = 0
