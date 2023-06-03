@@ -18,8 +18,8 @@ config_file = '.dotfiles/fish/.config/fish/config.fish'
 
 with open(function_file, 'r') as f:
     function_text = f.read()
-
-os.chdir('/Users/user')
+username = os.getlogin()
+os.chdir(f'/Users/{username}')
 with open(config_file, 'a') as f:
     f.write('\n' + function_text)
 
