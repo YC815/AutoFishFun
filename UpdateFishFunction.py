@@ -32,3 +32,6 @@ with open(config_file, 'r+') as f:
         f.write(line)
     f.write(function_text)
     f.truncate()
+
+username = os.getlogin()
+subprocess.call(['sh', f'/Users/{username}/autofishfun/ok.sh'])
