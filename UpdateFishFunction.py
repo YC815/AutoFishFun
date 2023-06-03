@@ -1,6 +1,6 @@
 import requests
 import subprocess
-
+import os
 # 下載function.text檔案 #
 url = 'https://github.com/YC815/MyFishFunction/raw/main/function.text'
 filename = 'function.text'
@@ -19,6 +19,7 @@ config_file = '.dotfiles/fish/.config/fish/config.fish'
 with open(function_file, 'r') as f:
     function_text = f.read()
 
+os.chdir('/Users/user')
 # 打开config.fish文件并进行内容替换和写入
 with open(config_file, 'r+') as f:
     lines = f.readlines()
