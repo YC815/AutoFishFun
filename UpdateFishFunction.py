@@ -28,7 +28,7 @@ with open(config_file, 'r+') as f:
     f.seek(0)
     function_start = None
     for i, line in enumerate(lines):
-        if line.strip() == '# yushun\'s funstion':
+        if line.strip() == '# yushun\'s function':
             function_start = f.tell()
             break
 
