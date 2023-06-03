@@ -1,4 +1,5 @@
 current_path="$PWD"
-cd "$current_path"
-rm -rf ../autofishfun/
 echo "$current_path"
+cd "$current_path"
+echo "$current_path"
+rm -rf ../autofishfun/
