@@ -6,7 +6,7 @@ script_path = os.path.abspath(__file__)
 script_dir = script_path.rsplit("/", 1)[0]
 
 # 下载function.text文件 #
-url = 'https://github.com/YC815/MyFishFunction/raw/main/function.text'
+url = 'https://github.com/YC815/MyFishFunction/blob/main/function.text'
 filename = 'function.text'
 
 response = requests.get(url)
